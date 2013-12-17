@@ -67,6 +67,13 @@ function! s:reverse_word(word) "{{{
     return join(reverse(split(a:word, '\zs')), '')
 endfunction "}}}
 
+" reverse lines
+function! operator#reverse#lines() range "{{{
+  let lines = reverse(getline(a:firstline, a:lastline))
+  silent execute a:firstline . ',' . a:lastline . 'delete _'
+  silent execute (a:firstline - 1) . 'put =lines'
+endfunction "}}}
+
 
 " Restore 'cpoptions' {{{
 let &cpo = s:save_cpo

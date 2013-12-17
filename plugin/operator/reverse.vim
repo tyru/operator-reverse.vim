@@ -19,11 +19,10 @@ endif
 
 
 
-" http://vim.wikia.com/wiki/Reverse_all_lines
 command!
 \   -bar -range=%
 \   OperatorReverseLines
-\   <line1>,<line2>g/^/m<line1>-1
+\   <line1>,<line2>call operator#reverse#lines()
 
 
 call operator#user#define_ex_command('reverse-lines', 'OperatorReverseLines')
