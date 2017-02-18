@@ -1,4 +1,4 @@
-*operator-reverse.txt* *operator-reverse*
+*operator-reverse.txt*
 
 Author:
   tyru <tyru.exe@gmail.com>
